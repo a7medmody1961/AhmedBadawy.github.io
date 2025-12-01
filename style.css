@@ -1,0 +1,180 @@
+/* Reset & Basic Styles - تهيئة المتصفح */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none; /* إزالة الاطار الافتراضي لمتصفح سوني */
+}
+
+body {
+    /* الخلفية المطلوبة */
+    background: url('img.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+    /* تحسين العرض على شاشات التلفاز */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* طبقة تعتيم فوق الخلفية عشان الكلام يبان بوضوح */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: -1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* تنسيق العنوان الرئيسي */
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #fff, #a0a0a0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    text-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ffd700; /* اللون الذهبي */
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* نظام الشبكة للأزرار - Grid System */
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+/* تنسيق الكروت (الأزرار الجديدة) */
+.card {
+    /* لون خلفية احتياطي لمتصفح البلايستيشن القديم */
+    background: rgba(20, 20, 20, 0.8); 
+    /* تفعيل الزجاج */
+    background: rgba(255, 255, 255, 0.05);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* تأثير الحركة عند الوقوف على الزر أو تحديده بالذراع */
+.card:hover, .card:focus {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffd700;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
+    outline: none; /* إزالة حدود التركيز الافتراضية */
+}
+
+.card-content h2 {
+    font-size: 1.8rem;
+    margin: 10px 0 5px;
+    font-weight: 700;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* التاج الأحمر لإصدار السوفتوير */
+.fw-tag {
+    background-color: #e50914; /* أحمر */
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* تمييز خاص لإصدار 9.00 */
+.gold-border .fw-tag {
+    background-color: #ffd700;
+    color: #000;
+}
+
+/* الفوتر وزر الواتساب */
+footer {
+    margin-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 30px;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+    margin-bottom: 20px;
+}
+
+/* دعم التركيز لزر الواتساب أيضاً */
+.whatsapp-btn:hover, .whatsapp-btn:focus {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.5);
+    background-color: #20bd5a;
+    outline: none;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* التجاوب مع الموبايل والشاشات الصغيرة */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    .grid-menu {
+        grid-template-columns: 1fr; /* الأزرار تبقى تحت بعض في الموبايل */
+    }
+}

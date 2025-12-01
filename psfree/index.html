@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PS4 9.00 FW GoldHEN Host | Ahmed Badawy</title>
+    <style>
+        /* تنسيقات خفيفة جداً لضمان أقصى سرعة واستقرار للثغرة */
+        body {
+            /* الخلفية المطلوبة */
+            background-image: url('../img.jpg');
+            background-size: cover;
+            background-color: #000; /* لون احتياطي */
+            color: #fff;
+            font-family: sans-serif; /* خط النظام الافتراضي السريع */
+            text-align: center;
+            margin: 0;
+            padding-top: 100px;
+            overflow: hidden; /* منع السكرول لتقليل المعالجة */
+        }
+
+        h1 {
+            font-size: 40px;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        #msgs {
+            font-size: 30px;
+            color: #ffd700; /* لون ذهبي بسيط */
+            margin-top: 50px;
+            font-weight: bold;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            font-size: 14px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cache Check -->
+    <script>
+        if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+    </script>
+
+    <!-- Content -->
+    <h1>AHMED BADAWY</h1>
+    <hr style="width: 300px; margin: 20px auto; opacity: 0.5;">
+    
+    <div id="msgs">Loading GoldHEN v2.4b18.7... Please Wait</div>
+
+    <!-- Hidden Console -->
+    <pre id='console' style="display: none;"></pre>
+
+    <!-- Footer -->
+    <div class="footer">Designed by Ahmed Badawy</div>
+
+    <!-- Exploit Payload -->
+    <script type='module' src='alert.mjs'></script>
+</body>
+</html>

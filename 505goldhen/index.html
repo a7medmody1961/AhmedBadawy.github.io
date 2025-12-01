@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+<head>
+<title>PS4 5.05 FW GoldHEN Host | Ahmed Badawy</title>
+<style>
+    body {
+        background-image: url('../img.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-color: #000;
+        color: white;
+        overflow: hidden;
+        font-family: sans-serif;
+        text-align: center;
+        margin: 0;
+        padding-top: 50px;
+    }
+    /* تنسيق العنوان الرئيسي */
+    .main-title {
+        font-size: 40px;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 3px 3px 0px #000;
+        -webkit-text-stroke: 1px black;
+    }
+    /* تنسيق الرسائل والحالة */
+    #msgs2 {
+        font-size: 30px;
+        color: #ffd700;
+        margin-top: 40px;
+        font-weight: bold;
+        text-shadow: 2px 2px 0px #000;
+        -webkit-text-stroke: 1px black;
+    }
+    /* تنسيق الفوتر */
+    .footer {
+        position: fixed;
+        bottom: 20px;
+        width: 100%;
+        font-size: 14px;
+        color: #ccc;
+        text-shadow: 1px 1px 0px #000;
+    }
+</style>
+<script src="exploit.js"></script>
+</head>
+<body onload="if(localStorage.cached505=='yes')setTimeout(exploit, 50);">
+
+<!-- Header الجديد -->
+<h1 class="main-title">AHMED BADAWY</h1>
+<hr style="width: 300px; margin: 20px auto; border: 0; border-top: 1px solid #fff; opacity: 0.5;">
+
+<!-- رسالة الحالة (حافظنا على ID msgs2 عشان السكربت يشوفه) -->
+<div id="msgs2">Loading GoldHEN v2.4b18.7... Please Wait</div>
+
+<!-- الفوتر -->
+<div class="footer">Designed by Ahmed Badawy</div>
+
+<!-- سكربت الكاش -->
+<script>
+window.applicationCache.onprogress=function(a){document.getElementById("msgs2").innerHTML="Installing Offline Cache: "+(Math.round(100*(a.loaded/a.total)))+"%"};
+window.applicationCache.oncached=function(){setTimeout(function(){document.getElementById("msgs2").innerHTML="Cache Installed Successfully ✔";},1500);setTimeout(function(){document.getElementById("msgs2").innerHTML="Now Close And Re-Open Your Browser ..."; },3500);localStorage.cached505="yes";};
+window.applicationCache.onnoupdate=function(){localStorage.cached505="yes";};
+window.applicationCache.onerror=function(){localStorage.cached505="yes";};
+</script>
+
+<!-- سكربت حقن البايلود (مهم جداً لـ 5.05) -->
+<script>
+function allset(){
+    document.getElementById("msgs2").innerHTML = LoadedMSG;
+}
+
+function load_payload(){
+req1=null;
+var req1=new XMLHttpRequest();
+req1.open('GET',PLfile);req1.responseType="arraybuffer";
+req1.send();
+ req1.onreadystatechange=function(){
+  if (req1.readyState==4){
+   var padding1=new Uint8Array(4 - (req1.response.byteLength % 4) % 4);
+   var tmp1=new Uint8Array(req1.response.byteLength + padding1.byteLength);
+   tmp1.set(new Uint8Array(req1.response),0);
+   tmp1.set(padding1,req1.response.byteLength);
+   var shellcode1=new Uint32Array(tmp1.buffer);
+   var code_addr1=new int64(0x26100000,0x00000009);
+   p.syscall(477,code_addr1,0x300000,7,0x41000,-1,0);
+    for(var i=0;i < shellcode1.length; i++){
+    p.write4(code_addr1.add32(0x100000 + i * 4),shellcode1[i]);
+    }
+   runPAYLOAD1=function(){
+   p.fcall(code_addr1);
+   PLfile=null;
+    for(var x=0;x < 0x300000;x += 8){
+    p.write8(code_addr1.add32(x),0);}
+    };
+    allset();
+   setTimeout(runPAYLOAD1,100);
+  }
+ };
+}
+
+function success(){
+LoadedMSG = "GoldHEN v2.4b18.7 Loaded ✔";
+PLfile = "goldhen_2.4b18.7.bin";
+load_payload();
+}
+</script>
+</body>
+</html>
