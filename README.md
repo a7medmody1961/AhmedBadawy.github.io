@@ -1,8 +1,8 @@
-🎮 PS4 Exploit Host - Ultimate Edition
+## 🎮 PS4 Exploit Host - Ultimate Edition
 
 A fully redesigned, modern, and lightweight Exploit Host for PlayStation 4. This project features a clean "Glassmorphism" UI, optimized performance for the PS4 Webkit browser, and supports multiple firmware versions with the latest GoldHEN payloads.
 
-✨ Features
+## ✨ Features
 
 🎨 Modern UI/UX: Complete redesign with a dark, glass-effect interface.
 
@@ -14,7 +14,7 @@ A fully redesigned, modern, and lightweight Exploit Host for PlayStation 4. This
 
 ⚡ Fast Exploits: Includes the latest GoldHEN and PsFree Webkit exploits.
 
-🕹️ Supported Firmwares
+## 🕹️ Supported Firmwares
 
 Firmware
 
@@ -72,7 +72,7 @@ PsFree
 
 GoldHEN v2.4b18.7
 
-🛠️ Installation & Usage
+## 🛠️ Installation & Usage
 
 Download: Clone or download this repository.
 
@@ -112,4 +112,4 @@ Znullptr
 
 The PS4 Scene Community
 
-© 2024 Ahmed Badawy. All rights reserved.
+## © 2024 Ahmed Badawy. All rights reserved.
