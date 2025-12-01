@@ -88,12 +88,12 @@ Cache: Wait for the "Cache Installed Successfully" message.
 
 Exploit: Re-open the browser and select your firmware.
 
-📞 Contact & Support
+## 📞 Contact & Support
 
 If you need any help or custom modifications, feel free to contact me:
 
-<a href="https://www.google.com/search?q=https://wa.me/201110210770" target="_blank">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/WhatsApp-Contact_Me-25D366%3Fstyle%3Dfor-the-badge%26logo%3Dwhatsapp%26logoColor%3Dwhite" alt="WhatsApp">
+<a href="https://wa.me/201110210770" target="_blank">
+  <img src="https://img.shields.io/badge/WhatsApp-Chat_With_Me-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Chat on WhatsApp"/>
 </a>
 
 👨‍💻 Credits
