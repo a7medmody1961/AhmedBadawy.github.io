@@ -96,7 +96,7 @@ If you need any help or custom modifications, feel free to contact me:
   <img src="https://img.shields.io/badge/WhatsApp-Chat_With_Me-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Chat on WhatsApp"/>
 </a>
 
-👨‍💻 Credits
+## 👨‍💻 Credits
 
 Developed & Designed by: Ahmed Badawy
 
