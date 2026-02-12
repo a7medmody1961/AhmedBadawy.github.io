@@ -30,7 +30,7 @@ Standard
 
 ✅ Stable
 
-GoldHEN v2.4b18.7
+goldhenGoldHEN v2.4b18.8
 
 6.72
 
@@ -38,7 +38,7 @@ Standard
 
 ✅ Stable
 
-GoldHEN v2.4b18.7
+goldhenGoldHEN v2.4b18.8
 
 7.02
 
@@ -46,7 +46,7 @@ Standard
 
 ✅ Stable
 
-GoldHEN v2.4b18.7
+goldhenGoldHEN v2.4b18.8
 
 7.50 - 7.55
 
@@ -54,7 +54,7 @@ Mixed
 
 ⚠️ Unstable
 
-GoldHEN v2.4b18.7
+goldhenGoldHEN v2.4b18.8
 
 9.00
 
@@ -62,7 +62,7 @@ FontFaceSet
 
 ✅ Stable
 
-GoldHEN v2.4b18.7
+goldhenGoldHEN v2.4b18.8
 
 9.00
 
@@ -70,7 +70,7 @@ PsFree
 
 🚀 Super Fast
 
-GoldHEN v2.4b18.7
+goldhenGoldHEN v2.4b18.8
 
 ## 🛠️ Installation & Usage
 
