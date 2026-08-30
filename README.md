@@ -1,15 +1,15 @@
 <div align="center">
   <h1>🎮 PS4 Exploit Host - Ultimate Edition</h1>
-  <p>A fully redesigned, modern, and lightweight Exploit Host for PlayStation 4.</p>
+  <p>A fully redesigned, modern, and auto-detecting Exploit Host for PlayStation 4.</p>
 </div>
 
-This project features a clean "Glassmorphism" UI, optimized performance for the PS4 Webkit browser, and supports multiple firmware versions with the latest GoldHEN payloads.
+This project features a clean UI, optimized performance for the PS4 Webkit browser, and supports multiple firmware versions with the latest GoldHEN payloads. It now includes a smart auto-detection system to load the correct exploit for your console automatically.
 
 ## ✨ Features
 
-* **🎨 Modern UI/UX:** Complete redesign with a dark, glass-effect interface.
+* **🎨 Modern UI/UX:** Clean, customized interface with an automated status display.
+* **🤖 Auto-Detect:** Smart index automatically detects your PS4 firmware (7.00 to 13.00) and redirects to the correct exploit.
 * **🚀 Lightweight:** Optimized code to prevent Webkit crashes and race-condition failures.
-* **📱 Responsive:** Works perfectly on PS4 browsers, Mobile, and PC.
 * **💾 Offline Cache:** Built-in Application Cache for offline usage.
 * **⚡ Fast Exploits:** Includes the latest Universal, Lapse, and Poops Webkit exploits.
 
@@ -18,19 +18,16 @@ This project features a clean "Glassmorphism" UI, optimized performance for the 
 | Firmware | Exploit Type | Status | Payload |
 | :--- | :--- | :--- | :--- |
 | **7.00 - 9.60** | Universal | ✅ Stable | GoldHEN |
-| **11.00 - 12.02** | Lapse | ✅ Stable | GoldHEN |
+| **10.00 - 11.02** | Webkit | ✅ Stable | GoldHEN |
+| **11.50 - 12.02** | Lapse | ✅ Stable | GoldHEN |
 | **12.50 - 13.00** | Poops | ✅ Stable | GoldHEN |
 
 ## 🛠️ Installation & Usage
 
-* **Download:** Clone or download this repository.
-* **Host:** 
-  * Use an ESP8266 or ESP32 module.
-  * Or host it on a local PC using XAMPP / Python Server / VS Code Live Server.
-  * Or use an Android phone with a hosting app.
-* **Connect:** Point your PS4 browser to the host IP address.
-* **Cache:** Wait for the "Cache Installed Successfully" message.
-* **Exploit:** Re-open the browser and select your firmware.
+* **Connect:** Connect your PS4 to the Internet.
+* **Browse:** Open your PS4 Web Browser and navigate to: **`https://www.ahmedbadawy.site/`**
+* **Cache:** Wait for the "Cache Installed Successfully ✔" message.
+* **Exploit:** Close the browser, turn off the internet (optional but recommended), then re-open the browser to run the exploit automatically.
 
 ## 📞 Contact & Support
 
@@ -42,7 +39,7 @@ If you need any help or custom modifications, feel free to contact me:
 
 ## 👨‍💻 Credits
 
-Developed & Designed by: **Ahmed Badawy**
+Developed, Designed & Customized by: **Ahmed Badawy**
 
 Special thanks to the original exploit developers:
 * SiSTRo (GoldHEN)
